@@ -25,8 +25,7 @@ public class Hero extends JComponent {
      * @param xPos
      * @param yPos
      */
-    public Hero(int xPos, int yPos)
-    {
+    public Hero(int xPos, int yPos) {
         x = xPos;
         y = yPos;
     }
@@ -112,8 +111,7 @@ public class Hero extends JComponent {
      * Add gravity effects to Hero position
      * @param c
      */
-    public void gravity(double c)
-    {
+    public void gravity(double c) {
         y += 2 * c;
     }
 
