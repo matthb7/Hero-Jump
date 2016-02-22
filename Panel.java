@@ -25,21 +25,22 @@ import java.awt.Graphics;
  *  @version Feb 21, 2016
  */
 public class Panel extends JPanel implements KeyListener {
-    private Hero hero;
+    private Timer t;
     private BufferedImage myImage;
     private Graphics myBuffer;
-    private Timer t;
+
+    private JButton start;
+    private JLabel labelLevel;
+    private JLabel labelScore;
+    private JLabel labelEnd;
+
+    private Hero hero;
     private ArrayList<Platform> list;
 
-    public int timerCount = 25;
-    public double gravityCount = 3 ;
-    public int scoreCount = 0;
-    public JButton start;
-    public boolean onPlat = true;
-    public boolean lost = false;
-    public JLabel labelLevel;
-    public JLabel labelScore;
-    public JLabel labelEnd;
+    private int timerCount = 25;
+    private int scoreCount = 0;
+    private double gravityCount = 3;
+    private boolean onPlat = true;
 
     // ----------------------------------------------------------
     /**
@@ -114,7 +115,6 @@ public class Panel extends JPanel implements KeyListener {
                 || hero.getY() < -10
                 || hero.getX() > 375
                 || hero.getX() < -10) {
-                lost = true;
                 labelEnd.setText("YOU LOSE");
                 scoreCount = 0;
                 t.stop();

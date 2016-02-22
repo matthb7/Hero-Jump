@@ -13,8 +13,8 @@ import javax.swing.*;
  */
 public class Platform extends JComponent
 {
+    private int x, y, width, length;
     private Color myColor;
-    public int x, y, width, length;
 
     // ----------------------------------------------------------
     /**
@@ -38,18 +38,20 @@ public class Platform extends JComponent
         return y;
     }
 
-    public int getWidth() {
-        return width;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
+    // ----------------------------------------------------------
+    /**
+     * Set current x position to new value
+     * @param xNew
+     */
     public void setX(int xNew) {
        x = xNew;
     }
 
+    // ----------------------------------------------------------
+    /**
+     * Set current y position to new value
+     * @param yNew
+     */
     public void setY(int yNew) {
         y = yNew;
     }
@@ -61,6 +63,6 @@ public class Platform extends JComponent
      */
     public void draw(Graphics myBuffer) {
         myBuffer.setColor(myColor);
-        myBuffer.drawRect(x, y, 50, 15);
+        myBuffer.drawRect(x, y, width, length);
     }
 }

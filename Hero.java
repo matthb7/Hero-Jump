@@ -3,8 +3,6 @@ package com.NewGame;
 import java.util.ArrayList;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.*;
 
 // -------------------------------------------------------------------------
 /**
@@ -14,10 +12,9 @@ import java.awt.image.*;
  *  @version Feb 21, 2016
  */
 public class Hero extends JComponent {
+    private int x, y;
     private Color myColor;
-
-    public int x, y;
-    public ImageIcon hero = new ImageIcon(getClass().getResource("Hero2.png"));
+    private ImageIcon hero = new ImageIcon(getClass().getResource("Hero2.png"));
 
     // ----------------------------------------------------------
     /**
